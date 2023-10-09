@@ -1,14 +1,21 @@
 package Command;
 
-public class addCandyToGiftCommand implements Command {
-    GiftCommands command;
+import Sweets.Sweets;
 
-    public addCandyToGiftCommand(GiftCommands command) {
+import java.util.List;
+
+public class addCandyToGiftCommand implements Command {
+    private GiftCommands command;
+    private List<Sweets> sweetsList;
+    private List<Sweets> gift;
+    public addCandyToGiftCommand(GiftCommands command, List<Sweets> sweetsList, List<Sweets> gift) {
         this.command = command;
+        this.sweetsList = sweetsList;
+        this.gift = gift;
     }
 
     @Override
-    public void execute(){
-     command.addCandyToGift();
+    public void execute() {
+        command.addCandyToGift(sweetsList,gift);
     }
 }
