@@ -21,7 +21,6 @@ public class OrangeGingerbread extends Sweets {
                 "Назва цукерки: " + getName() + "\n" +
                 "Тип: пряник " + "\n" +
                 "Вага: " + getWeight() + "\n" +
-                "Вміст цукру: " + getSugarContent() * 100 + "%" + "\n" +
-                "------------------------------------------------------------------";
+                "Вміст цукру: " + getSugarContent() * 100 + "%" + "\n";
     }
 }

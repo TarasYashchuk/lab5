@@ -14,7 +14,7 @@ public class CalculateGiftWeightCommand implements Command{
     }
 
     @Override
-    public void execute(){
+    public void execute() throws Exception{
         command.calculateGiftWeight(gift);
     }
     @Override

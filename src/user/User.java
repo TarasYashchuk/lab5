@@ -2,6 +2,7 @@ package user;
 
 import command.Command;
 
+import java.io.IOException;
 import java.util.Map;
 
 public class User {
@@ -12,7 +13,7 @@ public class User {
         this.commands = commands;
     }
 
-    public void executeCommand(String commandName) {
+    public void executeCommand(String commandName) throws Exception {
         Command command = commands.get(commandName);
         if (command != null) {
             command.execute();

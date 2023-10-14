@@ -15,7 +15,7 @@ public class AddCandyToGiftCommand implements Command {
     }
 
     @Override
-    public void execute() {
+    public void execute() throws Exception {
         command.addCandyToGift(sweetsList,gift);
     }
 

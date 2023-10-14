@@ -1,22 +1,16 @@
 package sweets;
 
-import sweets.candies.caramel.CaramelCandy;
-import sweets.candies.caramel.Gum;
-import sweets.candies.chocolatecandy.DarkChocolate;
-import sweets.candies.chocolatecandy.MilkChocolate;
-import sweets.candies.marmalade.FruitMarmalade;
-import sweets.candies.marmalade.JellyMarmalade;
-import sweets.candies.popsicles.FruitPopsicles;
-import sweets.candies.popsicles.MilkPopsicles;
-import sweets.other.chocolatebars.CaramelChocolateBar;
-import sweets.other.chocolatebars.NutChocolateBar;
-import sweets.other.cookies.ButterCookie;
-import sweets.other.cookies.ChocolateCookie;
-import sweets.other.gingerbread.HoneyGingerbread;
-import sweets.other.gingerbread.OrangeGingerbread;
+import sweets.candies.caramel.*;
+import sweets.candies.chocolatecandy.*;
+import sweets.candies.marmalade.*;
+import sweets.candies.popsicles.*;
+import sweets.other.chocolatebars.*;
+import sweets.other.cookies.*;
+import sweets.other.gingerbread.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public abstract class Sweets {
 
@@ -69,9 +63,17 @@ public abstract class Sweets {
 
         return sweets;
     }
-
     public static List<Sweets> getGiftList() {
         List<Sweets> gift = new ArrayList<>();
         return gift;
+    }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Sweets sweets = (Sweets) o;
+        return Double.compare(sweets.weight, weight) == 0 &&
+                Double.compare(sweets.sugarContent, sugarContent) == 0 &&
+                Objects.equals(name, sweets.name);
     }
 }

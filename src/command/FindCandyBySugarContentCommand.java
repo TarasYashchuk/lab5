@@ -2,6 +2,7 @@ package command;
 
 import sweets.Sweets;
 
+import java.util.InputMismatchException;
 import java.util.List;
 
 public class FindCandyBySugarContentCommand implements Command {
@@ -14,7 +15,7 @@ public class FindCandyBySugarContentCommand implements Command {
     }
 
     @Override
-    public void execute() {
+    public void execute() throws Exception {
         command.findCandyBySugarContent(gift);
     }
 

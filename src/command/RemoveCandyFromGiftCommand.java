@@ -14,7 +14,7 @@ public class RemoveCandyFromGiftCommand implements Command{
     }
 
     @Override
-    public void execute(){
+    public void execute()throws NumberFormatException,Exception{
         command.removeCandyFromGift(gift);
     }
 
